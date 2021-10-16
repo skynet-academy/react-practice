@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from './logo.svg'
+import './App.css'
+import Task1 from './L1/Task1'
+import NavVar from './L2/NavVar'
+import Joke from './L3/Joke'
+import jokeData from './jokeData'
+import Product from './L4/Product'
+import products from './productSales'
+import TodoItem from './L5/todoItem'
+import todosData from './todosData'
+//import Task6 from './L1/Task5.js'
+//import Task7 from './L1/Task6.js'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = ()=>{
+    const jokeComponents = jokeData.map(joke => <Joke key={joke.id} question={joke.question} punchline={joke.punchline} />)
+
+    const items = products.map(product => <Product key={product.id} name={product.name} price={product.price} description={product.description}  />) 
+
+    const todos = todosData.map(todo => <TodoItem key={todo.id} id={todo.id} task={todo.task} completed={todo.completed}/>)
+
+    return(
+        <div>
+            <NavVar />
+            <Task1 />
+            {jokeComponents}      
+            <br/>
+            {items}
+            <br />
+            {todos}
+        </div>
+    )
 }
+
 
 export default App;
