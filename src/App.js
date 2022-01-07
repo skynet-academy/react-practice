@@ -8,6 +8,11 @@ import Product from './L4/Product'
 import products from './productSales'
 import TodoItem from './L5/todoItem'
 import todosData from './todosData'
+import ReactPractice from './L6/ReactPractice'
+import StatePractice from './L7/StatePractice'
+import StatePractice2 from './L8/StatePractice2'
+import StatePractice3 from './L9/StatePractice3'
+
 //import Task6 from './L1/Task5.js'
 //import Task7 from './L1/Task6.js'
 
@@ -27,6 +32,11 @@ const App = ()=>{
             {items}
             <br />
             {todos}
+            <ReactPractice />
+            <StatePractice />
+            <StatePractice2 />
+            <br />
+            <StatePractice3 />
         </div>
     )
 }
